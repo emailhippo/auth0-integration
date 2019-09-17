@@ -1,101 +1,315 @@
----
-title: API Reference
 
-language_tabs: # must be one of https://git.io/vQNgJ
-  - JavaScript
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
 
-toc_footers:
-  - <a href='https://register.emailhippo.com/signup'>Sign Up for a Developer Key</a>
-  - <a href='https://help.emailhippo.com'>Support</a>
-  - <a href='https://www.emailhippo.com/compliance/terms-of-service/'>Terms of service</a>
-  - <a href='https://www.emailhippo.com/compliance'>Compliance (ISO27001 and GDPR)</a>
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
 
-includes:
-  # errors
-
-search: true
----
-```JavaScript
-
+  <body class="index" data-languages="[&quot;JavaScript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="JavaScript">JavaScript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#about-email-hippo" class="toc-h1 toc-link" data-title="About Email Hippo">About Email Hippo</a>
+          </li>
+          <li>
+            <a href="#about-auth0" class="toc-h1 toc-link" data-title="About Auth0">About Auth0</a>
+          </li>
+          <li>
+            <a href="#configuration" class="toc-h1 toc-link" data-title="Configuration">Configuration</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#prerequisites" class="toc-h2 toc-link" data-title="Prerequisites">Prerequisites</a>
+                  </li>
+                  <li>
+                    <a href="#configuration-on-email-hippo" class="toc-h2 toc-link" data-title="Configuration on Email Hippo">Configuration on Email Hippo</a>
+                  </li>
+                  <li>
+                    <a href="#configuration-on-auth0" class="toc-h2 toc-link" data-title="Configuration on Auth0">Configuration on Auth0</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://register.emailhippo.com/signup'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://help.emailhippo.com'>Support</a></li>
+            <li><a href='https://www.emailhippo.com/compliance/terms-of-service/'>Terms of service</a></li>
+            <li><a href='https://www.emailhippo.com/compliance'>Compliance (ISO27001 and GDPR)</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <pre class="highlight plaintext"><code>
 
 
 
   Please scroll down to see the code for your Auth0 rule. 
-```
+</code></pre>
+<p><img src="images/HeaderImage.png" alt="Email Hippo and Auth0 integration" /></p>
+<h1 id='introduction'>Introduction</h1>
+<p>The purpose of this function is to prevent new users from signing up to your Auth0 authenticated services with bad or disposable email addresses. Allowing use of email addresses which will hard bounce or are disposable will mean any subsequent attempt at contact with the user after sign-up will fail. Disposable email addresses are an early indicator of fraud. </p>
+<h1 id='about-email-hippo'>About Email Hippo</h1>
+<p>Email Hippo is a an email validation service and data services provider you can trust.</p>
 
-![Email Hippo and Auth0 integration](images/HeaderImage.png)
+<p>We provide accurate, guaranteed cloud-based email validation technology globally under ISO 27001 standards.</p>
 
-# Introduction
+<p>Businesses use Email Hippo to get cleaner email data, sort bad email addresses from lists and sign-ups and prevent disposable and other bad email addresses getting onto systems.</p>
 
-The purpose of this function is to prevent new users from signing up to your Auth0 authenticated services with bad or disposable email addresses. Allowing use of email addresses which will hard bounce or are disposable will mean any subsequent attempt at contact with the user after sign-up will fail. Disposable email addresses are an early indicator of fraud. 
+<p>You can be up and running with MORE, the Email Hippo API in fifteen minutes or less. MORE delivers 74 datapoints about every email address, so you can filter sign-ups, spot disposable emails and keep your data clean.</p>
 
-# About Email Hippo
+<p><a href="https://emailhippo.com">Link to Email Hippo</a></p>
+<h1 id='about-auth0'>About Auth0</h1>
+<p>Auth0 is an Identity as a Platform (IDaaS) service provider.</p>
 
-Email Hippo is a an email validation service and data services provider you can trust.
+<p>Auth0 is Identity made simple and secure. With Auth0, you take perhaps the riskiest endeavor your engineering organization will face, managing and securing the identities of your customers and employees, and abstract away this complexity and risk with our Identity Platform. </p>
 
-We provide accurate, guaranteed cloud-based email validation technology globally under ISO 27001 standards.
+<p>Our standards-based Identity-as-a-Service platform is built for developers, by developers so that your engineering organization can focus on building the solutions that delight your customers and drive your revenue. </p>
 
-Businesses use Email Hippo to get cleaner email data, sort bad email addresses from lists and sign-ups and prevent disposable and other bad email addresses getting onto systems.
+<p>Our customers find that what typically either takes months to deliver or simply cannot be delivered via internal or external solutions, takes them only days to deliver with Auth0 due to our extensive SDKs, intuitive API, extensible architecture and our simple management dashboard. </p>
 
-You can be up and running with MORE, the Email Hippo API in fifteen minutes or less. MORE delivers 74 datapoints about every email address, so you can filter sign-ups, spot disposable emails and keep your data clean.
+<p>This is why Auth0 is the leader in developer-focused Identity Management, with more than 5,000 customers trusting us with billions of transactions everyday.</p>
 
-[Link to Email Hippo](https://emailhippo.com)
+<p><a href="https://auth0.com">Link to Auth0</a></p>
+<h1 id='configuration'>Configuration</h1><h2 id='prerequisites'>Prerequisites</h2>
+<ol>
+<li><p>An Auth0 account with a tenant setup</p></li>
+<li><p>An Email Hippo account with a MORE API subscription and access to your API key.</p></li>
+</ol>
 
-# About Auth0
+<p><strong>To create an account and purchase a subscription for the MORE API please visit</strong> https://emailhippo.com </p>
+<h2 id='configuration-on-email-hippo'>Configuration on Email Hippo</h2>
+<p>Once you have a subscription set up and your API key there is no further setup required within Email Hippo.</p>
 
-Auth0 is an Identity as a Platform (IDaaS) service provider.
+<p>For further information on the MORE API please visit https://www.emailhippo.com/resources/technical-resources/</p>
+<h2 id='configuration-on-auth0'>Configuration on Auth0</h2>
+<ol>
+<li><p>Go to the Rules option on the menu</p></li>
+<li><p>Under Settings on this page add a new key value</p></li>
+<li><p>Set the key as &#39;HIPPO_API_KEY&#39; and the value as your Email Hippo API key</p></li>
+<li><p>Click on ‘+ Create Rule’</p></li>
+<li><p>Select the ‘Empty Rule’ template</p></li>
+<li><p>Name your rule - for example ‘Email Hippo Email Address Validation’</p></li>
+<li><p>Replace the code displayed in Auth0 with the JavaScript shown here</p></li>
+<li><p>Click on ‘Save’ or ‘Try this rule’ to use the function within your Auth0 sign up form and prevent sign ups with bad or disposable email addresses.</p></li>
+</ol>
 
-Auth0 is Identity made simple and secure. With Auth0, you take perhaps the riskiest endeavor your engineering organization will face, managing and securing the identities of your customers and employees, and abstract away this complexity and risk with our Identity Platform. 
+<p><strong>The MORE API (Edition2/Version3) contains multiple data points which you may wish to incorporate in your function, for example for prompting re-input of mis-spelled email addresses.</strong> </p>
 
-Our standards-based Identity-as-a-Service platform is built for developers, by developers so that your engineering organization can focus on building the solutions that delight your customers and drive your revenue. 
-
-Our customers find that what typically either takes months to deliver or simply cannot be delivered via internal or external solutions, takes them only days to deliver with Auth0 due to our extensive SDKs, intuitive API, extensible architecture and our simple management dashboard. 
-
-This is why Auth0 is the leader in developer-focused Identity Management, with more than 5,000 customers trusting us with billions of transactions everyday.
-
-[Link to Auth0](https://auth0.com)
-
-# Configuration
-
-## Prerequisites
-
-1. An Auth0 account with a tenant setup
-
-2. An Email Hippo account with a MORE API subscription and access to your API key.
-
-**To create an account and purchase a subscription for the MORE API please visit** https://emailhippo.com 
-
-## Configuration on Email Hippo
-
-Once you have a subscription set up and your API key there is no further setup required within Email Hippo.
-
-For further information on the MORE API please visit https://www.emailhippo.com/resources/technical-resources/
-
-## Configuration on Auth0
-
-1. Go to the Rules option on the menu
-
-2. Under Settings on this page add a new key value
-
-3. Set the key as 'HIPPO_API_KEY' and the value as your Email Hippo API key
-
-4. Click on ‘+ Create Rule’
-
-5. Select the ‘Empty Rule’ template
-
-6. Name your rule - for example ‘Email Hippo Email Address Validation’
-
-7. Replace the code displayed in Auth0 with the JavaScript shown here
-
-8. Click on ‘Save’ or ‘Try this rule’ to use the function within your Auth0 sign up form and prevent sign ups with bad or disposable email addresses.
-
-**The MORE API (Edition2/Version3) contains multiple data points which you may wish to incorporate in your function, for example for prompting re-input of mis-spelled email addresses.** 
-
-**Our function uses the simple ‘result’ and ‘additional status’ to identify the email addresses which should not be accepted.**
-
-
-```JavaScript
-
+<p><strong>Our function uses the simple ‘result’ and ‘additional status’ to identify the email addresses which should not be accepted.</strong></p>
+<pre class="highlight plaintext"><code>
 function (user, context, callback) {
 
   user.app_metadata = user.app_metadata || {};
@@ -112,9 +326,9 @@ function (user, context, callback) {
   }
 
   const request = require('request');
-  
+
   const key = configuration.HIPPO_API_KEY;
-  
+
   // Sign up at https://www.emailhippo.com/
   const url = 'https://api.hippoapi.com/v3/more/json/'+ key +'/' + user.email;
 
@@ -127,7 +341,7 @@ function (user, context, callback) {
     }
 
     const hippo_resonse = JSON.parse(body);
-    
+
     const result = hippo_resonse.emailVerification.mailboxVerification.result;
     const reason = hippo_resonse.emailVerification.mailboxVerification.reason;
 
@@ -136,7 +350,7 @@ function (user, context, callback) {
     // Any email address that is either bad or a Disposable email address
     // will be flagged as invalid. You can add your own custom logic if you want.
     let valid = true;
-    if (result === 'Bad' || (result === 'Unverifiable' && reason === 'DomainIsWellKnownDea')){
+    if (result === 'Bad' || (result === 'Unverifiable' &amp;&amp; reason === 'DomainIsWellKnownDea')){
         valid = false;
     } 
 
@@ -154,5 +368,13 @@ function (user, context, callback) {
   });
 }
 
-```
-
+</code></pre>
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="JavaScript">JavaScript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
